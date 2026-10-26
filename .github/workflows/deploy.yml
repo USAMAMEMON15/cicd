@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy Application
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF' ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF'
           sudo su -
           set -e
 
@@ -43,6 +43,7 @@ jobs:
 
           # Set ownership for Apache
           sudo chown -R www-data:www-data /var/www/html/cicd
+        EOF
 
           # Optional: restart Apache
           # systemctl restart apache2
