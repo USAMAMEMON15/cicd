@@ -23,6 +23,9 @@ jobs:
         ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF'
           set -e
 
+          # Ensure ubuntu user has ownership first
+          sudo chown -R ubuntu:ubuntu /var/www/html/cicd
+
           # Go to deployment directory
           cd /var/www/html/cicd
 
