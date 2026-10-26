@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy Application
       run: |
-        ssh -i "cicid.pem" ubuntu@ec2-100-61-203-152.compute-1.amazonaws.com << 'EOF'
+        ssh -i "cicid.pem" ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF'
           sudo su -
           set -e
 
