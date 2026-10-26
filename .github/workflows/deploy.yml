@@ -21,7 +21,6 @@ jobs:
     - name: Deploy Application
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@ec2-52-86-126-74.compute-1.amazonaws.com << 'EOF'
-          sudo su -
           set -e
 
           # Go to deployment directory
